@@ -30,7 +30,10 @@ jobs:
       # REACT_APP_DEMO_MODE=true switches on the mock backend (src/mocks) —
       # a plain `npm run build` here would ship a UI with no data source.
       - name: Build (demo mode — mock backend, no real API needed)
-        run: npm run build
+        env: 
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          CI: false
+        run: npm run build:demo
 
       - uses: actions/upload-pages-artifact@v3
         with:
