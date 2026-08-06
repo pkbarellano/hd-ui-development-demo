@@ -1,0 +1,5 @@
+export const AUTH_SET = 'AUTH_SET';
+export const AUTH_DESTROY = 'AUTH_DESTROY';
+
+export const NAVIGATION_SET = 'NAVIGATION_SET';
+export const NAVIGATION_DESTROY = 'NAVIGATION_DESTROY';
